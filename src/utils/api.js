@@ -25,6 +25,7 @@ api.interceptors.response.use(
 // ── Auth ──────────────────────────────────────────────
 export const loginUser    = (d) => api.post("/auth/login", d);
 export const registerUser = (d) => api.post("/auth/register", d);
+export const googleLoginApi = (token) => api.post("/auth/google", { id_token: token });
 export const getMe        = ()  => api.get("/auth/me");
 
 // ── Resume CRUD ───────────────────────────────────────
